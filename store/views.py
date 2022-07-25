@@ -9,6 +9,7 @@ from . utils import cookieCart, cartData, guestOrder
 
 def store(request):
     data = cartData(request)
+    
     cartItems = data['cartItems']
     products   =  Product.objects.all()
     context = { 'products' : products, 'cartItems':cartItems}
